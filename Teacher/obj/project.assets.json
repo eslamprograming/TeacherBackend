@@ -11845,11 +11845,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\About projects\\Teacher\\Backend\\Teacher\\Teacher\\Teacher.csproj",
+      "projectUniqueName": "E:\\TeacherBackend\\Teacher\\Teacher.csproj",
       "projectName": "Teacher",
-      "projectPath": "F:\\About projects\\Teacher\\Backend\\Teacher\\Teacher\\Teacher.csproj",
+      "projectPath": "E:\\TeacherBackend\\Teacher\\Teacher.csproj",
       "packagesPath": "C:\\Users\\eslam\\.nuget\\packages\\",
-      "outputPath": "F:\\About projects\\Teacher\\Backend\\Teacher\\Teacher\\obj\\",
+      "outputPath": "E:\\TeacherBackend\\Teacher\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -11872,11 +11872,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "F:\\About projects\\Teacher\\Backend\\Teacher\\BLL\\BLL.csproj": {
-              "projectPath": "F:\\About projects\\Teacher\\Backend\\Teacher\\BLL\\BLL.csproj"
+            "E:\\TeacherBackend\\BLL\\BLL.csproj": {
+              "projectPath": "E:\\TeacherBackend\\BLL\\BLL.csproj"
             },
-            "F:\\About projects\\Teacher\\Backend\\Teacher\\DAL\\DAL.csproj": {
-              "projectPath": "F:\\About projects\\Teacher\\Backend\\Teacher\\DAL\\DAL.csproj"
+            "E:\\TeacherBackend\\DAL\\DAL.csproj": {
+              "projectPath": "E:\\TeacherBackend\\DAL\\DAL.csproj"
             }
           }
         }

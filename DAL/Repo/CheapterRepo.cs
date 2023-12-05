@@ -64,11 +64,11 @@ namespace DAL.Repo
             }
         }
 
-        public async Task<Response<Cheapter>> GetAllCheapter()
+        public async Task<Response<Cheapter>> GetAllCheapter(int SubjectId)
         {
             try
             {
-                var Cheapters = await db.Cheapters.ToListAsync();
+                var Cheapters = await db.Cheapters.Where(n=>n.SubjectId==SubjectId).ToListAsync();
                 return new Response<Cheapter>
                 {
                     success = true,

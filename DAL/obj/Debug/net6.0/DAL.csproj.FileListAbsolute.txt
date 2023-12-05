@@ -12,3 +12,17 @@ F:\About projects\Teacher\Backend\Teacher\DAL\obj\Debug\net6.0\DAL.pdb
 F:\About projects\Teacher\Backend\Teacher\DAL\obj\Debug\net6.0\ref\DAL.dll
 F:\About projects\Teacher\Backend\Teacher\DAL\bin\Debug\net6.0\DAL.runtimeconfig.json
 F:\About projects\Teacher\Backend\Teacher\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
+E:\TeacherBackend\DAL\bin\Debug\net6.0\DAL.deps.json
+E:\TeacherBackend\DAL\bin\Debug\net6.0\DAL.runtimeconfig.json
+E:\TeacherBackend\DAL\bin\Debug\net6.0\DAL.dll
+E:\TeacherBackend\DAL\bin\Debug\net6.0\DAL.pdb
+E:\TeacherBackend\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+E:\TeacherBackend\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\TeacherBackend\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+E:\TeacherBackend\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+E:\TeacherBackend\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+E:\TeacherBackend\DAL\obj\Debug\net6.0\DAL.dll
+E:\TeacherBackend\DAL\obj\Debug\net6.0\refint\DAL.dll
+E:\TeacherBackend\DAL\obj\Debug\net6.0\DAL.pdb
+E:\TeacherBackend\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
+E:\TeacherBackend\DAL\obj\Debug\net6.0\ref\DAL.dll

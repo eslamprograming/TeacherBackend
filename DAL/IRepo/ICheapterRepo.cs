@@ -14,6 +14,6 @@ namespace DAL.IRepo
         Task<Response<Cheapter>> UpdateCheapter(Cheapter Cheapter, int Id);
         Task<Response<Cheapter>> DeleteCheapter(int Id);
         Task<Response<Cheapter>> GetCheapter(int Id);
-        Task<Response<Cheapter>> GetAllCheapter();
+        Task<Response<Cheapter>> GetAllCheapter(int SubjectId);
     }
 }

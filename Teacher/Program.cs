@@ -30,6 +30,7 @@ builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailS
 builder.Services.AddScoped<ISendMailService, SendMailService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddTransient<ISubjectServiec, SubjectService>();
+builder.Services.AddTransient<ICheapterService, CheapterService>();
 
 
 //Repo

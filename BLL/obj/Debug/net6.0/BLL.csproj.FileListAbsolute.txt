@@ -13,3 +13,18 @@ F:\About projects\Teacher\Backend\Teacher\BLL\obj\Debug\net6.0\ref\BLL.dll
 F:\About projects\Teacher\Backend\Teacher\BLL\bin\Debug\net6.0\DAL.dll
 F:\About projects\Teacher\Backend\Teacher\BLL\bin\Debug\net6.0\DAL.pdb
 F:\About projects\Teacher\Backend\Teacher\BLL\obj\Debug\net6.0\BLL.csproj.CopyComplete
+E:\TeacherBackend\BLL\bin\Debug\net6.0\BLL.deps.json
+E:\TeacherBackend\BLL\bin\Debug\net6.0\BLL.dll
+E:\TeacherBackend\BLL\bin\Debug\net6.0\BLL.pdb
+E:\TeacherBackend\BLL\bin\Debug\net6.0\DAL.dll
+E:\TeacherBackend\BLL\bin\Debug\net6.0\DAL.pdb
+E:\TeacherBackend\BLL\obj\Debug\net6.0\BLL.csproj.AssemblyReference.cache
+E:\TeacherBackend\BLL\obj\Debug\net6.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+E:\TeacherBackend\BLL\obj\Debug\net6.0\BLL.AssemblyInfoInputs.cache
+E:\TeacherBackend\BLL\obj\Debug\net6.0\BLL.AssemblyInfo.cs
+E:\TeacherBackend\BLL\obj\Debug\net6.0\BLL.csproj.CoreCompileInputs.cache
+E:\TeacherBackend\BLL\obj\Debug\net6.0\BLL.csproj.CopyComplete
+E:\TeacherBackend\BLL\obj\Debug\net6.0\BLL.dll
+E:\TeacherBackend\BLL\obj\Debug\net6.0\refint\BLL.dll
+E:\TeacherBackend\BLL\obj\Debug\net6.0\BLL.pdb
+E:\TeacherBackend\BLL\obj\Debug\net6.0\ref\BLL.dll

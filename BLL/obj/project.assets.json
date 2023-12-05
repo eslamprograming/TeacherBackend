@@ -2742,11 +2742,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\About projects\\Teacher\\Backend\\Teacher\\BLL\\BLL.csproj",
+      "projectUniqueName": "E:\\TeacherBackend\\BLL\\BLL.csproj",
       "projectName": "BLL",
-      "projectPath": "F:\\About projects\\Teacher\\Backend\\Teacher\\BLL\\BLL.csproj",
+      "projectPath": "E:\\TeacherBackend\\BLL\\BLL.csproj",
       "packagesPath": "C:\\Users\\eslam\\.nuget\\packages\\",
-      "outputPath": "F:\\About projects\\Teacher\\Backend\\Teacher\\BLL\\obj\\",
+      "outputPath": "E:\\TeacherBackend\\BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2768,8 +2768,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "F:\\About projects\\Teacher\\Backend\\Teacher\\DAL\\DAL.csproj": {
-              "projectPath": "F:\\About projects\\Teacher\\Backend\\Teacher\\DAL\\DAL.csproj"
+            "E:\\TeacherBackend\\DAL\\DAL.csproj": {
+              "projectPath": "E:\\TeacherBackend\\DAL\\DAL.csproj"
             }
           }
         }
