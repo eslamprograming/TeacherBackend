@@ -47,7 +47,9 @@ namespace DAL.Repo
         {
             try
             {
+                var choice = await db.QuestionChoices.Where(n => n.QuestionId == Id).ToListAsync();
                 var Question = await db.Question.Where(n => n.Id == Id).SingleOrDefaultAsync();
+                db.QuestionChoices.RemoveRange(choice);
                 db.Question.Remove(Question);
                 await db.SaveChangesAsync();
                 return new Response<Question>
@@ -72,7 +74,7 @@ namespace DAL.Repo
         {
             try
             {
-                var Questions = await db.Question.Where(n=>n.CheapterId==CheapterId).ToListAsync();
+                var Questions = await db.Question.Where(n=>n.CheapterId==CheapterId).Include(c=>c.Choices).ToListAsync();
 
                 return new Response<Question>
                 {
@@ -96,7 +98,7 @@ namespace DAL.Repo
         {
             try
             {
-                var Question = await db.Question.FindAsync(Id);
+                var Question = await db.Question.Where(n=>n.Id==Id).Include(c=>c.Choices).SingleOrDefaultAsync();
                 return new Response<Question>
                 {
                     statuscode = "200",
@@ -124,6 +126,8 @@ namespace DAL.Repo
                 Question1.Quction = Question.Quction;
                 Question1.Ansure=Question.Ansure;
                 Question1.CheapterId = Question.CheapterId;
+                var choice = await db.QuestionChoices.Where(n => n.QuestionId == Id).ToListAsync();
+                db.QuestionChoices.RemoveRange(choice);
                 Question1.Choices = Question.Choices;
                 
                 await db.SaveChangesAsync();

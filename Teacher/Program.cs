@@ -31,6 +31,8 @@ builder.Services.AddScoped<ISendMailService, SendMailService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddTransient<ISubjectServiec, SubjectService>();
 builder.Services.AddTransient<ICheapterService, CheapterService>();
+builder.Services.AddTransient<IQuctionTestService, QuctionTestService>();
+builder.Services.AddTransient<IQuestionService, QuestionService>();
 
 
 //Repo
