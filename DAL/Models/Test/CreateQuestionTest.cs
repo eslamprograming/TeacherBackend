@@ -16,7 +16,7 @@ namespace DAL.Models.Test
         [Required]
         public string Ansure { get; set; }
         [Required]
-        public ICollection<TestQuestionChoice> Choices { get; set; }
+        public List<string> Choices { get; set; }
         [Required]
         public int TestId { get; set; }
     }

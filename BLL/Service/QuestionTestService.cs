@@ -24,10 +24,22 @@ namespace BLL.Service
         {
             try
             {
+                List<TestQuestionChoice> testQuestionChoices = new List<TestQuestionChoice>();
                 QuctionTest QuctionTest1 = new QuctionTest();
                 QuctionTest1.Quction = QuctionTest.Quction;
                 QuctionTest1.Ansure = QuctionTest.Ansure;
-                QuctionTest1.Choices = QuctionTest.Choices;
+                foreach (var item in QuctionTest.Choices)
+                {
+                    TestQuestionChoice testQuestionChoice = new TestQuestionChoice();
+                    testQuestionChoice.choice = item;
+                    testQuestionChoice.QuestionTestId = QuctionTest1.Id;
+                    testQuestionChoices.Add(testQuestionChoice);
+                }
+                TestQuestionChoice testQuestionChoice2 = new TestQuestionChoice();
+                testQuestionChoice2.choice = QuctionTest.Ansure;
+                testQuestionChoice2.QuestionTestId = QuctionTest1.Id;
+                testQuestionChoices.Add(testQuestionChoice2);
+                QuctionTest1.Choices = testQuestionChoices;
                 QuctionTest1.TestId = QuctionTest.TestId;
 
                 var result = await _QuctionTestTest.CreateQuctionTest(QuctionTest1);
@@ -98,10 +110,22 @@ namespace BLL.Service
         {
             try
             {
+                List<TestQuestionChoice> testQuestionChoices = new List<TestQuestionChoice>();
                 QuctionTest QuctionTest1 = new QuctionTest();
                 QuctionTest1.Quction = QuctionTest.Quction;
                 QuctionTest1.Ansure = QuctionTest.Ansure;
-                QuctionTest1.Choices = QuctionTest.Choices;
+                foreach (var item in QuctionTest.Choices)
+                {
+                    TestQuestionChoice testQuestionChoice = new TestQuestionChoice();
+                    testQuestionChoice.choice = item;
+                    testQuestionChoice.QuestionTestId = QuctionTest1.Id;
+                    testQuestionChoices.Add(testQuestionChoice);
+                }
+                TestQuestionChoice testQuestionChoice2 = new TestQuestionChoice();
+                testQuestionChoice2.choice = QuctionTest.Ansure;
+                testQuestionChoice2.QuestionTestId = QuctionTest1.Id;
+                testQuestionChoices.Add(testQuestionChoice2);
+                QuctionTest1.Choices = testQuestionChoices;
                 QuctionTest1.TestId = QuctionTest.TestId;
 
                 var result = await _QuctionTestTest.UpdateQuctionTest(QuctionTest1, QuctionTestId);

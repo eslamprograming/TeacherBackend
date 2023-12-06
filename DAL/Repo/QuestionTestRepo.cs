@@ -47,6 +47,8 @@ namespace DAL.Repo
         {
             try
             {
+                var Choice = await db.TestQuestionsChoice.Where(n => n.QuestionTestId == Id).ToListAsync();
+                db.TestQuestionsChoice.RemoveRange(Choice);
                 var QuctionTest = await db.QuaternionTest.Where(n => n.Id == Id).SingleOrDefaultAsync();
                 db.QuaternionTest.Remove(QuctionTest);
                 await db.SaveChangesAsync();
@@ -121,6 +123,9 @@ namespace DAL.Repo
         {
             try
             {
+                var Choice = await db.TestQuestionsChoice.Where(n => n.QuestionTestId == Id).ToListAsync();
+                db.TestQuestionsChoice.RemoveRange(Choice);
+                await db.SaveChangesAsync();
                 var QuctionTest1 = await db.QuaternionTest.Where(n => n.Id == Id)
                     .Include(m => m.Choices).SingleOrDefaultAsync();
                 QuctionTest1.Quction = QuctionTest.Quction;

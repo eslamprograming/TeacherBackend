@@ -33,7 +33,8 @@ builder.Services.AddTransient<ISubjectServiec, SubjectService>();
 builder.Services.AddTransient<ICheapterService, CheapterService>();
 builder.Services.AddTransient<IQuctionTestService, QuctionTestService>();
 builder.Services.AddTransient<IQuestionService, QuestionService>();
-
+builder.Services.AddTransient<ITestService, TestService>();
+builder.Services.AddTransient<IDegreeService, DegreeService>();
 
 //Repo
 builder.Services.AddTransient<ISubjectRepo, SubjectRepo>();

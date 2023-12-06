@@ -49,6 +49,16 @@ namespace DAL.Repo
         {
             try
             {
+                var AllQuestionTest = await db.QuaternionTest.Where(n => n.TestId == Id).ToListAsync();
+                foreach (var item in AllQuestionTest)
+                {
+                    var QuestionTestChoice = await db.TestQuestionsChoice.Where(n => n.QuestionTestId == item.Id).ToListAsync();
+                    db.TestQuestionsChoice.RemoveRange(QuestionTestChoice);
+                    db.QuaternionTest.Remove(item);
+                    await db.SaveChangesAsync();
+                }
+                var TestDegree = await db.Degrees.Where(n => n.TestId == Id).ToListAsync();
+                db.Degrees.RemoveRange(TestDegree);
                 var Test = await db.Tests.Where(n => n.Id == Id).SingleOrDefaultAsync();
                 db.Tests.Remove(Test);
                 await db.SaveChangesAsync();
@@ -123,8 +133,10 @@ namespace DAL.Repo
             try
             {
                 var Test1 = await db.Tests.FindAsync(Id);
-                Test1.Poster = Test1.Poster;
-                Test1.Name = Test1.Name;
+                Test1.Poster = Test.Poster;
+                Test1.Name = Test.Name;
+                Test1.Count = Test.Count;
+                Test1.FullMark = Test.FullMark;
                 await db.SaveChangesAsync();
                 return new Response<Test>
                 {

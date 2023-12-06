@@ -2,6 +2,7 @@
 using BLL.Helper;
 using BLL.IService;
 using DAL.Models.Test;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,23 +12,48 @@ namespace Teacher.Controllers
     [ApiController]
     public class TestController : ControllerBase
     {
-        private readonly ISendMailService sendMailService;
+        private readonly ITestService _testService;
 
-        public TestController(ISendMailService sendMailService)
+        public TestController(ITestService testService)
         {
-            this.sendMailService = sendMailService;
+            _testService = testService;
         }
-
-        [HttpPost("sendMail")]
-        public async Task<IActionResult> sendMail()
+        //[Authorize(Roles ="Teacher , Admin")]
+        [HttpPost("CreateTest")]
+        public async Task<IActionResult> CreateTest([FromForm]CreateTest test)
         {
-            var result = sendMailService.sendEmailAsync("eslam.alsayed.khalil@gmail.com", "subject", "body");
-            return Ok("send");
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            var result = await _testService.CreateTestAsync(test);
+            return Ok(result);
         }
-        [HttpPost("Uploadphoto")]
-        public  IActionResult Uploadphoto([FromForm] photo FileName)
+        //[Authorize(Roles = "Teacher , Admin")]
+        [HttpDelete("DeleteTest")]
+        public async Task<IActionResult> DeleteTest(int testId)
         {
-            var result = BLL.Helper.Files.Save(FileName.image);
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            var result = await _testService.DeleteTestAsync(testId);
+            return Ok(result);
+        }
+        //[Authorize(Roles = "Teacher , Admin")]
+        [HttpPatch("UpdateTest")]
+        public async Task<IActionResult> UpdateTest([FromForm]CreateTest test,int TestId)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            var result = await _testService.UpdateTest(test,TestId);
+            return Ok(result);
+        }
+        [HttpGet("GetAllTestInSubject")]
+        public async Task<IActionResult> GetAllTestInSubject(int SubjectId)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            var result = await _testService.GetAllTestsInSubject(SubjectId);
+            return Ok(result);
+        }
+        [HttpGet("GetTest")]
+        public async Task<IActionResult> GetTest(int TestId)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            var result = await _testService.GetTest(TestId);
             return Ok(result);
         }
     }

@@ -1,4 +1,5 @@
-﻿using DAL.Entities;
+﻿using BLL.IService;
+using DAL.Entities;
 using DAL.IRepo;
 using DAL.Migrations;
 using DAL.Models.Sheard;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Service
 {
-    public class DegreeService
+    public class DegreeService:IDegreeService
     {
         private readonly IDegreeRepo _degreeRepo;
 
@@ -19,7 +20,7 @@ namespace BLL.Service
         {
             _degreeRepo = degreeRepo;
         }
-        public async Task<Response<Degree>> CreateDegree(CreateDegree Degree1)
+        public async Task<Response<Degree>> CreateDegreeAsync(CreateDegree Degree1)
         {
             try
             {
@@ -42,7 +43,7 @@ namespace BLL.Service
             }
         }
 
-        public async Task<Response<Degree>> DeleteDegree(int Id)
+        public async Task<Response<Degree>> DeleteDegreeAsync(int Id)
         {
             try
             {
@@ -60,7 +61,7 @@ namespace BLL.Service
             }
         }
 
-        public async Task<Response<Degree>> GetAllDegree(int TestId)
+        public async Task<Response<Degree>> GetAllDegreeAsync(int TestId)
         {
             try
             {
@@ -78,7 +79,7 @@ namespace BLL.Service
             }
         }
 
-        public async Task<Response<Degree>> GetDegree(int StudentId, int TestId)
+        public async Task<Response<Degree>> GetDegreeAsync(int StudentId, int TestId)
         {
             try
             {
@@ -97,7 +98,7 @@ namespace BLL.Service
             }
         }
 
-        public async Task<Response<Degree>> GetStudentDegrees(int SAtudentId)
+        public async Task<Response<Degree>> GetStudentDegreesAsync(int SAtudentId)
         {
             try
             {
