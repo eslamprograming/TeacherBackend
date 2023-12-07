@@ -17,5 +17,6 @@ namespace BLL.IService
         Task<Response<QuctionTest>> GetAllQuctionTestsInCheapter(int CheapterId);
         Task<Response<QuctionTest>> GetQuctionTest(int QuctionTestId);
         Task<Response<QuctionTest>> UpdateQuctionTest(CreateQuestionTest QuctionTest, int QuctionTestId);
+        Task<Response<string>> CorrectTest(List<CorrectQuectionTest> QuestionsTest, int TestId, int StudentId, int SubjectId);
     }
 }

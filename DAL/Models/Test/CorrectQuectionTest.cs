@@ -7,14 +7,11 @@ using System.Threading.Tasks;
 
 namespace DAL.Models.Test
 {
-    public class CreateDegree
+    public class CorrectQuectionTest
     {
         [Required]
-        public int degree { get; set; }
+        public string Quction { get; set; }
         [Required]
-        public int TestId { get; set; }
-        public int? SubjectId { get; set; }
-        [Required]
-        public int StudentId { get; set; }
+        public string Ansure { get; set; }
     }
 }

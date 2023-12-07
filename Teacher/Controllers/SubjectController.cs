@@ -22,14 +22,14 @@ namespace Teacher.Controllers
             _subjectServiec = subjectServiec;
         }
         [HttpPost("CreateSubject")]
-        [Authorize(Roles ="Teacher , Admin")]
+        [Authorize(Roles ="Teacher,Admin")]
         public async Task<IActionResult> CreateSubject([FromForm]CreateSubject subject)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             var result = await _subjectServiec.CreateSubjectAsync(subject);
             return Ok(result);
         }
-        [Authorize(Roles ="Teacher , Admin")]
+        [Authorize(Roles ="Teacher,Admin")]
         [HttpDelete("DeleteSubject")]
         public async Task<IActionResult> DeleteSubject(int Id)
         {
@@ -48,7 +48,7 @@ namespace Teacher.Controllers
             var result = await _subjectServiec.GetAllSubjectAsync();
             return Ok(result);
         }
-        [Authorize(Roles = "Teacher , Admin")]
+        [Authorize(Roles = "Teacher,Admin")]
         [HttpPatch("UpdateSubject")]
         public async Task<IActionResult> UpdateSubject([FromForm]UpdateSubject subject,int Id)
         {

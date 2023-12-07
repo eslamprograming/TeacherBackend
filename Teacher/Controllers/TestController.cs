@@ -18,7 +18,7 @@ namespace Teacher.Controllers
         {
             _testService = testService;
         }
-        //[Authorize(Roles ="Teacher , Admin")]
+        [Authorize(Roles = "Teacher,Admin")]
         [HttpPost("CreateTest")]
         public async Task<IActionResult> CreateTest([FromForm]CreateTest test)
         {
@@ -26,7 +26,7 @@ namespace Teacher.Controllers
             var result = await _testService.CreateTestAsync(test);
             return Ok(result);
         }
-        //[Authorize(Roles = "Teacher , Admin")]
+        [Authorize(Roles = "Teacher,Admin")]
         [HttpDelete("DeleteTest")]
         public async Task<IActionResult> DeleteTest(int testId)
         {
@@ -34,7 +34,7 @@ namespace Teacher.Controllers
             var result = await _testService.DeleteTestAsync(testId);
             return Ok(result);
         }
-        //[Authorize(Roles = "Teacher , Admin")]
+        [Authorize(Roles = "Teacher,Admin")]
         [HttpPatch("UpdateTest")]
         public async Task<IActionResult> UpdateTest([FromForm]CreateTest test,int TestId)
         {

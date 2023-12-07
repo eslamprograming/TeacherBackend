@@ -28,7 +28,6 @@ namespace BLL.Service
                 Video1.Name = Video.Name;
                 Video1.video = Files.Save(Video.video);
                 Video1.CheapterId = Video.CheapterId;
-
                 var result = await _videoRepo.CreateVideo(Video1);
                 return result;
 

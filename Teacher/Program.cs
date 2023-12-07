@@ -35,6 +35,7 @@ builder.Services.AddTransient<IQuctionTestService, QuctionTestService>();
 builder.Services.AddTransient<IQuestionService, QuestionService>();
 builder.Services.AddTransient<ITestService, TestService>();
 builder.Services.AddTransient<IDegreeService, DegreeService>();
+builder.Services.AddTransient<IVideoService, VideoService>();
 
 //Repo
 builder.Services.AddTransient<ISubjectRepo, SubjectRepo>();

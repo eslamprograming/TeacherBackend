@@ -76,7 +76,7 @@ namespace Teacher.Controllers
                 return Ok(e.Message);
             }
         }
-        [Authorize(Roles = "Student")]
+        [Authorize(Roles = "Student,Admin,Teacher")]
         [HttpGet("PersonInfo")]
         public async Task<IActionResult> PersonInfo()
         {

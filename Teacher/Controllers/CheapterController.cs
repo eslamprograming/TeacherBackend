@@ -16,7 +16,7 @@ namespace Teacher.Controllers
         {
             _cheapterService = cheapterService;
         }
-        [Authorize(Roles ="Teacher , Admin")]
+        [Authorize(Roles ="Teacher,Admin")]
         [HttpPost("CreateCheapter")]
         public async Task<IActionResult> CreateCheapter([FromForm]CreateCheapter cheapter)
         {
@@ -24,14 +24,14 @@ namespace Teacher.Controllers
             var result = await _cheapterService.CreateCheapterAsync(cheapter);
             return Ok(result);
         }
-        [Authorize(Roles = "Teacher , Admin")]
+        [Authorize(Roles = "Teacher,Admin")]
         [HttpDelete("DeleteCheapter")]
         public async Task<IActionResult> DeleteCheapter(int CheapterId)
         {
             var result = await _cheapterService.DeleteCheapterAsync(CheapterId);
             return Ok(result);
         }
-        [Authorize(Roles = "Teacher , Admin")]
+        [Authorize(Roles = "Teacher,Admin")]
         [HttpPatch("UpdateCheapter")]
         public async Task<IActionResult> UpdateCheapter([FromForm]CreateCheapter cheapter,int cheapterId)
         {

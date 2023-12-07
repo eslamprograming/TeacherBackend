@@ -36,6 +36,10 @@ namespace BLL.Service
                     qchoice.QuestionId = Question1.Id;
                     questionChoices.Add(qchoice);
                 }
+                QuestionChoice qchoice1 = new QuestionChoice();
+                qchoice1.choice = Question.Ansure;
+                qchoice1.QuestionId = Question1.Id;
+                questionChoices.Add(qchoice1);
                 Question1.Choices = questionChoices;
                 Question1.CheapterId = Question.CheapterId;
 

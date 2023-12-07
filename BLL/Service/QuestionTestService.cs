@@ -10,16 +10,69 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace BLL.Service
 {
     public class QuctionTestService: IQuctionTestService
     {
         private readonly IQuestionTestRepo _QuctionTestTest;
+        private readonly IDegreeService _degreeService;
 
-        public QuctionTestService(IQuestionTestRepo QuctionTestTest)
+
+        public QuctionTestService(IQuestionTestRepo QuctionTestTest, IDegreeService degreeService)
         {
             _QuctionTestTest = QuctionTestTest;
+            _degreeService = degreeService;
         }
+
+
+        private async Task<object> AddDegree(CreateDegree Degree)
+        {
+            var result = await _degreeService.CreateDegreeAsync(Degree);
+            return result;
+        }
+
+        public async Task<Response<string>> CorrectTest(List<CorrectQuectionTest> QuestionsTest,int TestId,int StudentId,int SubjectId)
+        {
+            try
+            {
+                int x = 0;
+                int degree = 0;
+                var result = await GetAllQuctionTestsInCheapter(TestId);
+                
+                foreach (var item in QuestionsTest)
+                {
+                    if (item.Quction == result.values[x].Quction)
+                    {
+                        if(item.Ansure == result.values[x].Ansure)
+                        {
+                            degree++;
+                        }
+                    }
+                    x++;
+                }
+                CreateDegree degree1 = new CreateDegree();
+                degree1.degree=degree;
+                degree1.TestId = TestId;
+                degree1.StudentId = StudentId;
+                degree1.SubjectId = SubjectId;
+                await AddDegree(degree1);
+                return new Response<string>
+                {
+                    success = true,
+                    statuscode="200",
+                    Value ="Degree = "+ degree.ToString()
+                };
+            }
+            catch (Exception e)
+            {
+                return new Response<string>
+                {
+                    message = e.Message
+                };
+            }
+        }
+
         public async Task<Response<QuctionTest>> CreateQuctionTestAsync(CreateQuestionTest QuctionTest)
         {
             try
@@ -140,5 +193,6 @@ namespace BLL.Service
                 };
             }
         }
+
     }
 }
