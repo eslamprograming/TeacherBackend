@@ -71,7 +71,14 @@ namespace BLL.Service
             Student student = new Student();
             student.ApplicationUserId = user.Id;
             student.User = user;
-            student.SubjectID = model.SubjectId;
+            if (student.SubjectID == 0 || student.SubjectID == null)
+            {
+                //student.SubjectID = null;
+            }
+            else
+            {
+                student.SubjectID = model.SubjectId;
+            }
             db.Students.Add(student);
             await db.SaveChangesAsync();
 

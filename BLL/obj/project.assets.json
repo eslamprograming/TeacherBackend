@@ -2742,11 +2742,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\TeacherBackend\\BLL\\BLL.csproj",
+      "projectUniqueName": "E:\\teacher\\TeacherBackend\\BLL\\BLL.csproj",
       "projectName": "BLL",
-      "projectPath": "E:\\TeacherBackend\\BLL\\BLL.csproj",
+      "projectPath": "E:\\teacher\\TeacherBackend\\BLL\\BLL.csproj",
       "packagesPath": "C:\\Users\\eslam\\.nuget\\packages\\",
-      "outputPath": "E:\\TeacherBackend\\BLL\\obj\\",
+      "outputPath": "E:\\teacher\\TeacherBackend\\BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2768,8 +2768,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\TeacherBackend\\DAL\\DAL.csproj": {
-              "projectPath": "E:\\TeacherBackend\\DAL\\DAL.csproj"
+            "E:\\teacher\\TeacherBackend\\DAL\\DAL.csproj": {
+              "projectPath": "E:\\teacher\\TeacherBackend\\DAL\\DAL.csproj"
             }
           }
         }
@@ -2825,7 +2825,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -16,7 +16,7 @@ namespace BLL.Helper
         public static string Save(IFormFile file)
         {
             Stream fileStream = GetFileAsStream("teacher-407012-658fe495e1e6.json");
-            string folderId = "1WF0xmTn7WmZLYYrJVvmW-z5Uj5dtj51q";
+            string folderId = "1KMcE_s-MAz8fEoqTdm8eBkMxEbft5JQ_";
             string fileUrl = UploadFileToGoogleDrive(file, folderId, fileStream);
             string fileId = ConvertToDirectLink(fileUrl);
             return fileId;
